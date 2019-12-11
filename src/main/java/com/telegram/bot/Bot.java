@@ -27,7 +27,6 @@ public class Bot extends TelegramLongPollingBot {
 
     private final CityInfoService cityInfoService;
 
-    @Autowired
     public Bot(CityInfoService cityInfoService) {
         this.cityInfoService = cityInfoService;
     }
