@@ -5,9 +5,10 @@ bot token=847095326:AAGrRANemOLPpXulSlBL5fUF_vScFUOqD1o
 
 Application uses MySql database.
 spring.datasource.url=jdbc:mysql://localhost:3306/bot
-Flyway migration files: 
 
-# V1__Init_DB:
+# Flyway migration files: 
+
+## V1__Init_DB:
 create table hibernate_sequence (
 next_val bigint
 ) engine=InnoDB;
@@ -31,7 +32,7 @@ alter table info
 add constraint info_city_fk
 foreign key (city_id) references city (id)
  
-# V2__Start_Values:*
+## V2__Start_Values:*
  
 insert into city (id, name) values (1, 'Минск');
  
