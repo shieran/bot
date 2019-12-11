@@ -1,9 +1,11 @@
 # Bot
 
 bot name=GoncharovCityInfoBot
+
 bot token=847095326:AAGrRANemOLPpXulSlBL5fUF_vScFUOqD1o
 
 Application uses MySql database.
+
 spring.datasource.url=jdbc:mysql://localhost:3306/bot
 
 # Flyway migration files: 
@@ -16,16 +18,25 @@ next_val bigint
 insert into hibernate_sequence values ( 1 );
  
 create table city (
+
 id bigint not null,
+
 name varchar(255),
+
 primary key (id)
+
 ) engine=InnoDB;
  
 create table info (
+
 id bigint not null,
+
 info_message varchar(255),
+
 city_id bigint,
+
 primary key (id)
+
 ) engine=InnoDB;
  
 alter table info
