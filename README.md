@@ -32,7 +32,7 @@ alter table info
 add constraint info_city_fk
 foreign key (city_id) references city (id)
  
-## V2__Start_Values:*
+## V2__Start_Values:
  
 insert into city (id, name) values (1, 'Минск');
  
