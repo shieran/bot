@@ -1,4 +1,4 @@
-Bot
+###### **Bot**
 
 bot name=GoncharovCityInfoBot
 bot token=847095326:AAGrRANemOLPpXulSlBL5fUF_vScFUOqD1o
@@ -7,7 +7,7 @@ Application uses MySql database.
 spring.datasource.url=jdbc:mysql://localhost:3306/bot
 Flyway migration files: 
 
-V1__Init_DB:
+###### **V1__Init_DB:**
 
  create table hibernate_sequence (
  next_val bigint
@@ -32,7 +32,7 @@ V1__Init_DB:
  add constraint info_city_fk
  foreign key (city_id) references city (id)
  
- V2__Start_Values: 
+######  **V2__Start_Values:** 
  
  insert into city (id, name) values (1, 'Минск');
  
@@ -60,30 +60,30 @@ V1__Init_DB:
  insert into info (id, info_message, city_id)
              values (6, 'Музеев в Берлине больше, чем дождливых дней', 4);
              
-REST City:
+###### **REST City:**
 
-get all
+**get all**
 GET /city/all
 
-get by name
+**get by name**
 POST /city
 {
 	"name": "Минск"
 }
 
-add city
+**add city**
 POST /city/add
 {
 	"name": "Минск"
 }
 
-delete city
+**delete city**
 DELETE /city
 {
 	"id": 3
 }
 
-update city
+**update city**
 PUT /city
 {
 	"id": 3,
@@ -91,24 +91,24 @@ PUT /city
 }
 
 
-REST Info
+###### **REST Info**
 
-get information about the city
+**get information about the city**
 GET /info
 {
 	"name": "Минск"
 }
 
-get information about all cities
+**get information about all cities**
 GET /info/all
 
-get information by id
+**get information by id**
 POST /info
 {
 	"id": 1
 }
 
-add new information
+**add new information**
 POST /info/add
 {
 	"infoMessage": "new information",
@@ -117,13 +117,13 @@ POST /info/add
 	}
 }
 
-delete information
+**delete information**
 DELETE /info/delete
 {
 	"id": 1
 }
 
-update information
+**update information**
 PUT /info
 {
     "id": 1,
